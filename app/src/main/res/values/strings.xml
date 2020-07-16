@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyPet</string>
+    <string name="menu_titulo">Configuración</string>
+    <string name="foto_mascota">Foto de mascota</string>
+    <string name="dialog_title_ranking">Ranking de mascota</string>
+    <string name="dialog_msj_ranking">"El rankede de la mascota "</string>
+    <string name="dialog_btnAceptar">Aceptar</string>
+</resources>

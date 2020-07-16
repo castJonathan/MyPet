@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="elevation_actionbar">4dp</dimen>
+    <dimen name="actionbar_title_sizeText">22sp</dimen>
+    <dimen name="actionbar_title_bootMargen">16dp</dimen>
+    <dimen name="card_margen_separacion">5dp</dimen>
+    <dimen name="card_nombre">18sp</dimen>
+    <dimen name="card_estrellas_textSize">18sp</dimen>
+    <dimen name="actionbar_start_size">52dp</dimen>
+    <dimen name="card_radio">4dp</dimen>
+</resources>
