@@ -26,9 +26,6 @@ public class TopPet extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        btnTopPet = myActionBar.findViewById(R.id.btnTopPet);
-        btnTopPet.setVisibility(View.GONE);
-
         rvTopMascotas = (RecyclerView) findViewById(R.id.rvTopMascotas);
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);

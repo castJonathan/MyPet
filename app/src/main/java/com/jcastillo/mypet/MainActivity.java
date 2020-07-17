@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<Pet> pets;
 
     private RecyclerView rvMascotas;
-    private Button btnTopPet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,15 +32,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar myActionBar = (Toolbar) findViewById(R.id.myActionBar);
         setSupportActionBar(myActionBar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-        btnTopPet = myActionBar.findViewById(R.id.btnTopPet);
-        btnTopPet.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, TopPet.class);
-                startActivity(i);
-            }
-        });
         rvMascotas = (RecyclerView) findViewById(R.id.rvMascotas);
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
@@ -77,6 +68,17 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.mSettings:
+                Toast.makeText(this, R.string.menu_titulo, Toast.LENGTH_LONG).show();
+                break;
+            case R.id.mTopPet:
+                Intent i = new Intent(MainActivity.this, TopPet.class);
+                startActivity(i);
+                break;
+        }
+
         return super.onOptionsItemSelected(item);
     }
 }

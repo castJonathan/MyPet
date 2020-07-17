@@ -41,18 +41,6 @@
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
-            android:id="@+id/btnTopPet"
-            android:layout_width="@dimen/actionbar_start_size"
-            android:layout_height="@dimen/actionbar_start_size"
-            android:background="@android:drawable/btn_star_big_on"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:text="5"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.appcompat.widget.Toolbar>

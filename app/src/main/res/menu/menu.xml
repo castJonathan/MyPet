@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/action_settings"
-        android:title="@string/menu_titulo"></item>
+        android:id="@+id/mSettings"
+        android:title="@string/menu_titulo"
+        android:orderInCategory="100"
+        >
+
+    </item>
+
+    <item
+        android:id="@+id/mTopPet"
+        android:title="5"
+        android:orderInCategory="101"
+        app:showAsAction="always"
+        android:icon="@android:drawable/btn_star_big_on"
+        >
+
+    </item>
 </menu>
