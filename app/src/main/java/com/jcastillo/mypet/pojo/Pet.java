@@ -1,4 +1,4 @@
-package com.jcastillo.mypet;
+package com.jcastillo.mypet.pojo;
 
 /**
  * Created by Jonathan Castillo on 14,July,2020
@@ -10,9 +10,10 @@ public class Pet {
     private int foto;
     private int rank = 0;
 
-    public Pet(String nombre, int foto) {
+    public Pet(String nombre, int foto, int rank) {
         this.nombre = nombre;
         this.foto = foto;
+        this.rank = rank;
     }
 
     public String getNombre() {

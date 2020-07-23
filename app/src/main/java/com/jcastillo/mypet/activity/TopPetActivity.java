@@ -1,4 +1,4 @@
-package com.jcastillo.mypet;
+package com.jcastillo.mypet.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -6,16 +6,18 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+
+import com.jcastillo.mypet.R;
+import com.jcastillo.mypet.adapter.PetAdapter;
+import com.jcastillo.mypet.pojo.Pet;
 
 import java.util.ArrayList;
 
-public class TopPet extends AppCompatActivity {
+public class TopPetActivity extends AppCompatActivity {
 
-    private Button btnTopPet;
     private RecyclerView rvTopMascotas;
     ArrayList<Pet> pets;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +36,8 @@ public class TopPet extends AppCompatActivity {
         inicializarAdaptador();
 
     }
-    public void inicializarAdaptador(){
+
+    public void inicializarAdaptador() {
         PetAdapter adaptador = new PetAdapter(pets);
         rvTopMascotas.setAdapter(adaptador);
     }
@@ -42,10 +45,10 @@ public class TopPet extends AppCompatActivity {
     public void inicializarListaPets() {
         //llenado de los dummy
         pets = new ArrayList<Pet>();
-        pets.add(new Pet("Hunter", R.drawable.funny_dog));
-        pets.add(new Pet("Minoshca", R.drawable.funny_dog2));
-        pets.add(new Pet("Thrall", R.drawable.funny_dog3));
-        pets.add(new Pet("Oso", R.drawable.funny_dog4));
-        pets.add(new Pet("Canelo", R.drawable.funny_dog5));
+        pets.add(new Pet("Hunter", R.drawable.funny_dog,4));
+        pets.add(new Pet("Minoshca", R.drawable.funny_dog2,5));
+        pets.add(new Pet("Thrall", R.drawable.funny_dog3,2));
+        pets.add(new Pet("Oso", R.drawable.funny_dog4,1));
+        pets.add(new Pet("Canelo", R.drawable.funny_dog5,6));
     }
 }

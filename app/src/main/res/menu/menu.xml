@@ -3,9 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/mContact"
+        android:title="@string/menu_titulo_contacto"
+        android:orderInCategory="100"
+        >
+
+    </item>
+    <item
+        android:id="@+id/mAbout"
+        android:title="@string/menu_titulo_acerca"
+        android:orderInCategory="101"
+        >
+
+    </item>
+    <item
         android:id="@+id/mSettings"
         android:title="@string/menu_titulo"
-        android:orderInCategory="100"
+        android:orderInCategory="102"
         >
 
     </item>
@@ -13,7 +27,7 @@
     <item
         android:id="@+id/mTopPet"
         android:title="5"
-        android:orderInCategory="101"
+        android:orderInCategory="103"
         app:showAsAction="always"
         android:icon="@android:drawable/btn_star_big_on"
         >

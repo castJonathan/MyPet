@@ -8,4 +8,5 @@
     <dimen name="card_estrellas_textSize">18sp</dimen>
     <dimen name="actionbar_start_size">52dp</dimen>
     <dimen name="card_radio">4dp</dimen>
+    <dimen name="about_nombre">32sp</dimen>
 </resources>

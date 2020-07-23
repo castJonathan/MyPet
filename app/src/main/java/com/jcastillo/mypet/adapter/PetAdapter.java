@@ -1,20 +1,19 @@
-package com.jcastillo.mypet;
+package com.jcastillo.mypet.adapter;
 
-import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.jcastillo.mypet.R;
+import com.jcastillo.mypet.pojo.Pet;
 
 import java.util.ArrayList;
 
