@@ -1,10 +1,10 @@
 # MyPet
 
 ## Pantalla principal
-![MyPet_screen1](https://user-images.githubusercontent.com/5687282/87689186-23789f80-c745-11ea-8ff2-139fe81268da.png)
+![MyPet_screen1](https://user-images.githubusercontent.com/5687282/87810507-580a5b00-c81a-11ea-9b50-7bb43cd6108f.png)
 
 ## Dialogo que muestra en rank de la mascota
-![MyPet_screen2](https://user-images.githubusercontent.com/5687282/87689190-25426300-c745-11ea-8a02-b6e163108a78.png)
+![MyPet_screen2](https://user-images.githubusercontent.com/5687282/87810513-593b8800-c81a-11ea-862e-35d2ca6166e5.png)
 
 ## Lista de mascotas con mas rank
-![MyPet_screen3](https://user-images.githubusercontent.com/5687282/87689204-283d5380-c745-11ea-8076-3df4b0c0736c.png)
+![MyPet_screen3](https://user-images.githubusercontent.com/5687282/87810515-5b054b80-c81a-11ea-8cc4-28543da57fea.png)
