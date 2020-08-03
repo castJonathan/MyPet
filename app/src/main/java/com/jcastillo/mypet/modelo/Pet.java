@@ -1,4 +1,4 @@
-package com.jcastillo.mypet.pojo;
+package com.jcastillo.mypet.modelo;
 
 /**
  * Created by Jonathan Castillo on 14,July,2020
@@ -6,14 +6,19 @@ package com.jcastillo.mypet.pojo;
 
 
 public class Pet {
+    private int id;
     private String nombre;
     private int foto;
-    private int rank = 0;
+    private int rank;
 
     public Pet(String nombre, int foto, int rank) {
         this.nombre = nombre;
         this.foto = foto;
         this.rank = rank;
+    }
+
+    public Pet() {
+
     }
 
     public String getNombre() {
@@ -38,5 +43,13 @@ public class Pet {
 
     public void setRank(int rank) {
         this.rank = rank;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

@@ -1,5 +1,6 @@
 package com.jcastillo.mypet.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.view.LayoutInflater;
@@ -7,13 +8,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.jcastillo.mypet.R;
-import com.jcastillo.mypet.pojo.Pet;
+import com.jcastillo.mypet.modelo.Pet;
+import com.jcastillo.mypet.modelo.PetModel;
 
 import java.util.ArrayList;
 
@@ -27,15 +30,15 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.PetViewHolder> {
     ArrayList<Pet> pets;
     Context context;
 
-    public PetAdapter(ArrayList<Pet> pets) {
+    public PetAdapter(ArrayList<Pet> pets, Context context) {
         this.pets = pets;
+        this.context = context;
     }
 
     @NonNull
     @Override
     public PetViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) { //Inflara el layout y lo pasara al viewholder para obtener los views
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_mascota, parent, false);
-        context = parent.getContext();
         return new PetViewHolder(v);
     }
 
@@ -50,9 +53,11 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.PetViewHolder> {
 
             @Override
             public void onClick(View view) {
-                int r = pet.getRank();
-                pet.setRank(r + 1);
-                petViewHolder.tvRank.setText(Integer.toString(pet.getRank()));
+                Toast.makeText(context, "Le diste like a " + pet.getNombre(), Toast.LENGTH_SHORT).show();
+                PetModel petModel = new PetModel(context);
+                petModel.darLike(pet);
+                petViewHolder.tvRank.setText(String.valueOf(petModel.obtenerLikescontacto(pet)));
+
             }
         });
 

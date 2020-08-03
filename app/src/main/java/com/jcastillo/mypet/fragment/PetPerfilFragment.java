@@ -1,5 +1,6 @@
 package com.jcastillo.mypet.fragment;
 
+import android.app.Activity;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -12,22 +13,23 @@ import android.view.ViewGroup;
 
 import com.jcastillo.mypet.R;
 import com.jcastillo.mypet.adapter.PetPerfilAdapter;
-import com.jcastillo.mypet.pojo.Pet;
+import com.jcastillo.mypet.modelo.Pet;
 
 import java.util.ArrayList;
 
 
-public class PetPerfilFragment extends Fragment {
-
+public class PetPerfilFragment extends Fragment{
     private RecyclerView rvPerfilMascotas;
     private ArrayList<Pet> pets;
+
+    Activity activity;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.fragment_pet_perfil, container, false);
-
+        activity = getActivity();
         rvPerfilMascotas = (RecyclerView) v.findViewById(R.id.rvPerfilMascotas);
         GridLayoutManager glm = new GridLayoutManager(getContext(), 3);
         rvPerfilMascotas.setLayoutManager(glm);
@@ -54,7 +56,7 @@ public class PetPerfilFragment extends Fragment {
 
     }
     private void initializerAdaptor() {
-        PetPerfilAdapter adapter = new PetPerfilAdapter(pets);
+        PetPerfilAdapter adapter = new PetPerfilAdapter(pets, activity);
         rvPerfilMascotas.setAdapter(adapter);
     }
 }

@@ -3,8 +3,6 @@ package com.jcastillo.mypet.activity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
@@ -12,27 +10,21 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayout;
 import com.jcastillo.mypet.R;
 import com.jcastillo.mypet.adapter.PageAdapter;
-import com.jcastillo.mypet.adapter.PetAdapter;
 import com.jcastillo.mypet.fragment.PetPerfilFragment;
 import com.jcastillo.mypet.fragment.RecycledViewFragment;
-import com.jcastillo.mypet.pojo.Pet;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ArrayList<Pet> pets;
     private Toolbar myActionBar;
     private ViewPager viewPager;
     private TabLayout tabLayout;
-
-    private RecyclerView rvMascotas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,6 +1,6 @@
 package com.jcastillo.mypet.adapter;
 
-import android.content.Context;
+import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.jcastillo.mypet.R;
-import com.jcastillo.mypet.pojo.Pet;
+import com.jcastillo.mypet.modelo.Pet;
 
 import java.util.ArrayList;
 
@@ -23,17 +23,17 @@ import java.util.ArrayList;
 public class PetPerfilAdapter extends RecyclerView.Adapter<PetPerfilAdapter.PetPerfilViewHolder>{
 
     ArrayList<Pet> pets;
-    Context context;
+    Activity activity;
 
-    public PetPerfilAdapter(ArrayList<Pet> pets) {
+    public PetPerfilAdapter(ArrayList<Pet> pets, Activity activity) {
         this.pets = pets;
+        this.activity = activity;
     }
 
     @NonNull
     @Override
     public PetPerfilViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_perfilmascota, parent, false);
-        context = parent.getContext();
         return new PetPerfilViewHolder(v);
     }
 
